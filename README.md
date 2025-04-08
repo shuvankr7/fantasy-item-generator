@@ -5,7 +5,7 @@ LIVE APP LINK - https://huggingface.co/spaces/shuvankar/fantasy-item-generator
 
 This project uses a fine-tuned language model to generate fantasy item names based on creative prompts like *"ice staff"*, *"arcane shield"*, or *"dark sword"*. It’s built with 🤗 Transformers and deployed with Streamlit.
 
-Model is trained on data2.csv, data is generated manually and using LLM
+Model is trained on data2.csv, data is generated manually and using LLM.
 
 ------ Features
 
