@@ -38,9 +38,13 @@ If you're running offline or want to avoid fetching from Hugging Face every time
 
 Download the model from the link above.
 
-
     model = AutoModelForCausalLM.from_pretrained("shuvankar/fantasy-item-model2")
     tokenizer = AutoTokenizer.from_pretrained("shuvankar/fantasy-item-model2")
+
+    
+You can use api.py and index.html to run it in local aswell
+
+
 
 
 💡 Example Prompt
