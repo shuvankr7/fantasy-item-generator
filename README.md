@@ -10,7 +10,7 @@ This project uses a fine-tuned language model to generate fantasy item names bas
 
 - Fantasy item name generation from short text prompts.
 - Fine-tuned GPT-2 on fantasy-themed inputs/outputs.
-- Web UI using Streamlit (no FastAPI needed).
+- Web UI using Streamlit
 - 🤗-hosted model loading.
 
 
