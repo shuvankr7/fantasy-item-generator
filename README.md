@@ -18,7 +18,6 @@ This project uses a fine-tuned language model to generate fantasy item names bas
 
 -- 1. Clone the repository
 
-```bash
 https://github.com/shuvankr7/fantasy-item-generator.git
 
 pip install -r requirements.txt
