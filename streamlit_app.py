@@ -43,10 +43,3 @@ if generate and prompt.strip():
 elif generate:
     st.warning("⚠️ Please enter a prompt.")
     
-#model status
-with st.expander("📊 Model Info"):
-    st.write({
-        "model": "shuvankar/fantasy-item-model2",
-        "device": str(device),
-        "uptime": f"{time.time() - start_time:.2f} seconds"
-    })
