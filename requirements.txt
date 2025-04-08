@@ -1,5 +1,2 @@
-fastapi
-uvicorn[standard]
 transformers
 torch
-pyngrok
