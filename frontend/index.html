@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>🧙 Fantasy Item Generator</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #f4f4f4;
+      text-align: center;
+      padding: 40px;
+    }
+    input, button {
+      padding: 10px;
+      font-size: 1.1rem;
+      margin: 10px;
+      width: 300px;
+    }
+    .output {
+      margin-top: 20px;
+      font-weight: bold;
+      font-size: 1.2rem;
+    }
+  </style>
+</head>
+<body>
+  <h1>🧙 Fantasy Item Generator</h1>
+  <p>Enter your fantasy prompt:</p>
+  <input id="prompt" type="text" placeholder="e.g. ice element" />
+  <br/>
+  <button onclick="generateItem()">🔮 Generate</button>
+  <div id="output" class="output"></div>
+
+  <script>
+    async function generateItem() {
+      const prompt = document.getElementById("prompt").value;
+      const outputDiv = document.getElementById("output");
+
+      if (!prompt.trim()) {
+        outputDiv.textContent = "⚠️ Please enter a prompt.";
+        return;
+      }
+
+      outputDiv.textContent = "✨ Generating...";
+
+      try {
+        const response = await fetch(`http://127.0.0.1:8000/generate?prompt=${encodeURIComponent(prompt)}`);
+        const data = await response.json();
+
+        if (data.output) {
+          outputDiv.textContent = `🛡️ ${data.output}`;
+        } else {
+          outputDiv.textContent = `❌ Error: ${data.error || "Unknown error"}`;
+        }
+      } catch (err) {
+        outputDiv.textContent = `❌ Error connecting to backend. Is it running?`;
+        console.error(err);
+      }
+    }
+  </script>
+</body>
+</html>
