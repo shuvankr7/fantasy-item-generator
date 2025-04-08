@@ -21,6 +21,7 @@ This project uses a fine-tuned language model to generate fantasy item names bas
 https://github.com/shuvankr7/fantasy-item-generator.git
 
 pip install -r requirements.txt
+
 streamlit run app.py
 
 
