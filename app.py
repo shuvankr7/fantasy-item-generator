@@ -8,8 +8,8 @@ app = FastAPI()
 start_time = time.time()
 device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 
-model = AutoModelForCausalLM.from_pretrained("fantasy_item_model2").to(device)
-tokenizer = AutoTokenizer.from_pretrained("fantasy_item_model2")
+model = AutoModelForCausalLM.from_pretrained("https://huggingface.co/spaces/shuvankar/fantasy_item_model2/tree/main").to(device)
+tokenizer = AutoTokenizer.from_pretrained("https://huggingface.co/spaces/shuvankar/fantasy_item_model2/tree/main")
 
 
 app.add_middleware(
