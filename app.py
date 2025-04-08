@@ -1,4 +1,4 @@
-# app.py
+
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 from transformers import AutoModelForCausalLM, AutoTokenizer
@@ -11,7 +11,7 @@ device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 model = AutoModelForCausalLM.from_pretrained("fantasy_item_model2").to(device)
 tokenizer = AutoTokenizer.from_pretrained("fantasy_item_model2")
 
-# Enable CORS
+
 app.add_middleware(
     CORSMiddleware,
     allow_origins=["*"],
