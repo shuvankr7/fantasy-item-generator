@@ -43,7 +43,7 @@ if generate and prompt.strip():
 elif generate:
     st.warning("⚠️ Please enter a prompt.")
     
-# Optional: Show model status
+#model status
 with st.expander("📊 Model Info"):
     st.write({
         "model": "shuvankar/fantasy-item-model2",
