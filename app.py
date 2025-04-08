@@ -10,8 +10,8 @@ app.mount("/", StaticFiles(directory="static", html=True), name="static")
 start_time = time.time()
 device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 
-model = AutoModelForCausalLM.from_pretrained("https://huggingface.co/spaces/shuvankar/fantasy_item_model2/tree/main").to(device)
-tokenizer = AutoTokenizer.from_pretrained("https://huggingface.co/spaces/shuvankar/fantasy_item_model2/tree/main")
+model = AutoModelForCausalLM.from_pretrained("shuvankar/fantasy-item-model2")
+tokenizer = AutoTokenizer.from_pretrained("shuvankar/fantasy-item-model2")
 
 @app.get("/generate")
 def generate(prompt: str):
