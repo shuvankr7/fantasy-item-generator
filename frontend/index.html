@@ -38,7 +38,7 @@
       const outputDiv = document.getElementById("output");
 
       if (!prompt.trim()) {
-        outputDiv.textContent = "⚠️ Please enter a prompt.";
+        outputDiv.textContent = "Please enter a prompt.";
         return;
       }
 
@@ -51,10 +51,10 @@
         if (data.output) {
           outputDiv.textContent = `🛡️ ${data.output}`;
         } else {
-          outputDiv.textContent = `❌ Error: ${data.error || "Unknown error"}`;
+          outputDiv.textContent = `Error: ${data.error || "Unknown error"}`;
         }
       } catch (err) {
-        outputDiv.textContent = `❌ Error connecting to backend. Is it running?`;
+        outputDiv.textContent = `Error connecting to backend. Is it running?`;
         console.error(err);
       }
     }
