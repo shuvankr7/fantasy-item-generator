@@ -3,6 +3,9 @@ from transformers import AutoModelForCausalLM, AutoTokenizer
 import torch
 import time
 
+# 🛠️ Must be the first Streamlit command
+st.set_page_config(page_title="🧙 Fantasy Item Generator")
+
 # Setup
 start_time = time.time()
 device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
@@ -16,7 +19,6 @@ def load_model():
 model, tokenizer = load_model()
 
 # Streamlit UI
-st.set_page_config(page_title="🧙 Fantasy Item Generator")
 st.title("🧙 Fantasy Item Generator")
 st.write("Enter a fantasy prompt like `ice element`, `staff of fire`, or `arcane shield`")
 
@@ -42,4 +44,3 @@ if generate and prompt.strip():
             st.error(f"❌ Error: {str(e)}")
 elif generate:
     st.warning("⚠️ Please enter a prompt.")
-    
