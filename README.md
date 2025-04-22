@@ -1,6 +1,6 @@
 ------ Fantasy Item Generator
 
-LIVE APP LINK - https://huggingface.co/spaces/shuvankar/fantasy-item-generator
+LIVE APP LINK - https://fantasy-item-generator-vnqjy5v3msme7qpzram9gz.streamlit.app/
 
 
 This project uses a fine-tuned language model to generate fantasy item names based on creative prompts like *"ice staff"*, *"arcane shield"*, or *"dark sword"*. It’s built with 🤗 Transformers and deployed with Streamlit.
